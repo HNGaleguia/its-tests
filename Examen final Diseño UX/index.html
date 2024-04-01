@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Pantalla 1 - Iniciar Sesión -->
+    <div class="screen" id="screen1">
+        <header>
+            <img src="images/paris.png" alt="Logo">
+            <h1> </h1>
+        </header>
+
+        <div class="content">
+            <div class="welcome-text">
+                <p><a href="#">Volver a inicio</a></p>
+                <p><strong>Bienvenido a Olimpiadas Store 2024</strong></p>
+            </div>
+
+            <div class="form-container">
+                <form id="loginForm">
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="username" placeholder="Tu correo electrónico" required>
+
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" placeholder="Ingresa 6 caracteres o más" required>
+
+                    <button type="button" onclick="login()">Iniciar Sesión</button>
+                    <button type="button" onclick="goToScreen2()">Olvidé mi contraseña</button>
+                </form>
+            </div>
+
+            <div class="image-container">
+                <img src="images/paris2.png" alt="Imagen" class="side-image">
+            </div>        
+        </div>
+    </div>
+
+    <!-- Pantalla 2 - Olvidé mi contraseña -->
+    <div class="screen" id="screen2" style="display: none;">
+        <header>
+            <img src="images/paris.png" alt="Logo">
+            <h1></h1>
+        </header>
+
+        <div class="content">
+            <p>Ingresa tu correo electrónico para recuperar tu contraseña:</p>
+            <form id="recoveryForm">
+                <label for="recoveryEmail">Correo Electrónico:</label>
+                <input type="email" id="recoveryEmail" name="recoveryEmail" placeholder="Tu correo electrónico" required>
+
+                <button type="button" onclick="sendRecoveryEmail()">Enviar Correo de Recuperación</button>
+            </form>
+        </div>
+
+        <div class="image-container">
+            <img src="images/paris2.png" alt="Imagen" class="side-image">
+        </div>
+    </div>
+
+<!-- Pantalla 3 - Inicio de Sesión Exitoso -->
+<div class="screen" id="screen3" style="display: none;">
+    <header>
+        <img src="images/paris.png" alt="Logo">
+        <h1>Sesión Iniciada</h1>
+    </header>
+
+    <div class="content">
+        <p>Bienvenido a Olimpiadas Store 2024. Has iniciado sesión correctamente.</p>
+    </div>
+
+    <div class="image-container">
+        <img src="images/paris2.png" alt="Imagen" class="side-image">
+    </div>
+</div>
+
+    <script src="script.js"></script>
+
+    <script>
+     
+    </script>
+
+</body>
+</html>
+
+
+
+
+
